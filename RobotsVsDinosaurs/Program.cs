@@ -6,7 +6,8 @@ namespace RobotsVsDinosaurs
 	{
 		static void Main(string[] args)
 		{
-			// Have Robot Fleets and Dinosaur Herds fight
+			// Have Robot Fleets and Dinosaur Herds fight on Battlefield
+			Battlefield battlefield1 = new Battlefield(2,3,"Marathon");
 			//	Create 3 Robots and store in Fleet
 			//		--> Extra TODO: Arm Robots
 			//			--> Extra TODO: Randomize Weapon draw
