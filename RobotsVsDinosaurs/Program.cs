@@ -15,12 +15,14 @@ namespace RobotsVsDinosaurs
 			//			--> Extra TODO: Randomize Attack use
 			// Decide Victor after complete Fleet/Herd wiped out
 
+			// Variable Declaration
+
 
 			// Class Instantiation
 			Random randomizer = new Random();
 
 			Battlefield battlefield1 = new Battlefield(2, 2, "Marathon");
-
+			Console.WriteLine("\n");
 
 			Fleet fleet1 = new Fleet("The Shadow");
 			Fleet fleet2 = new Fleet("The Curators");
@@ -28,6 +30,7 @@ namespace RobotsVsDinosaurs
 			Herd herd1 = new Herd("Obsidian");
 			Herd herd2 = new Herd("Collapse");
 
+			Console.WriteLine("\n");
 
 			Robot robot1 = new Robot("00000001");
 			Robot robot2 = new Robot("00000010");
@@ -45,6 +48,7 @@ namespace RobotsVsDinosaurs
 			Dinosaur dinosaur5 = new Dinosaur("Thecogryphus");
 			Dinosaur dinosaur6 = new Dinosaur("Deinotrachelomoloch");
 
+			Console.WriteLine("\n");
 
 			WeaponType weaponType1 = new WeaponType("Fire Slam");
 			WeaponType weaponType2 = new WeaponType("Justice Smash");
@@ -66,25 +70,27 @@ namespace RobotsVsDinosaurs
 			// Program Start
 
 			// Prepare User For Battle Statistics
-			Console.WriteLine("Battle commencing shortly...");
+			Console.WriteLine("\n\nBattle commencing shortly...\n\n");
 
 			// Add Robots to Fleet
 			Robot[] roboArray1 = new Robot[] { robot1, robot2, robot3 };
 			fleet1.robots = roboArray1;
-			Console.WriteLine("Loading {0}, {1}, and {2} into a fleet! \n{0} has {3} units of integrity. \n{1} and {2} have {4} and {5} Wh of power respectively.", robot1.name, robot2.name, robot3.name, robot1.integrity, robot2.powerLevel, robot3.powerLevel);
+			Console.WriteLine("Loading {0}, {1}, and {2} into the {6} fleet! \n{0} has {3} units of integrity. \n{1} and {2} have {4} and {5} Wh of power respectively.", robot1.name, robot2.name, robot3.name, robot1.integrity, robot2.powerLevel, robot3.powerLevel, fleet1.name);
 
 			Robot[] roboArray2 = new Robot[] { robot4, robot5, robot6 };
 			fleet2.robots = roboArray2;
-			Console.WriteLine("Loading {0}, {1}, and {2} into a fleet! \n{0} has {3} units of integrity. \n{1} and {2} have {4} and {5} Wh of power respectively.", robot4.name, robot5.name, robot6.name, robot4.integrity, robot5.powerLevel, robot6.powerLevel);
+			Console.WriteLine("Loading {0}, {1}, and {2} into the {6} fleet! \n{0} has {3} units of integrity. \n{1} and {2} have {4} and {5} Wh of power respectively.", robot4.name, robot5.name, robot6.name, robot4.integrity, robot5.powerLevel, robot6.powerLevel, fleet2.name);
+
+			Console.WriteLine("\n");
 
 			// Add Dinosaurs to Herds
 			Dinosaur[] dinoArray1 = new Dinosaur[] { dinosaur1, dinosaur2, dinosaur3 };
 			herd1.dinosaurs = dinoArray1;
-			Console.WriteLine("Loading {0}, {1}, and {2} into a herd! \n{0} has {3} units of health. \n{1} and {2} have {4} and {5} units of energy respectively.", dinosaur1.name, dinosaur2.name, dinosaur3.name, dinosaur1.health, dinosaur2.energy, dinosaur3.energy);
+			Console.WriteLine("Loading {0}, {1}, and {2} into the {6} herd! \n{0} has {3} units of health. \n{1} and {2} have {4} and {5} units of energy respectively.", dinosaur1.name, dinosaur2.name, dinosaur3.name, dinosaur1.health, dinosaur2.energy, dinosaur3.energy, herd1.name);
 
 			Dinosaur[] dinoArray2 = new Dinosaur[] { dinosaur4, dinosaur5, dinosaur6 };
 			herd2.dinosaurs = dinoArray2;
-			Console.WriteLine("Loading {0}, {1}, and {2} into a herd! \n{0} has {3} units of health. \n{1} and {2} have {4} and {5} units of energy respectively.", dinosaur4.name, dinosaur5.name, dinosaur6.name, dinosaur4.health, dinosaur5.energy, dinosaur6.energy);
+			Console.WriteLine("Loading {0}, {1}, and {2} into the {6} herd! \n{0} has {3} units of health. \n{1} and {2} have {4} and {5} units of energy respectively.", dinosaur4.name, dinosaur5.name, dinosaur6.name, dinosaur4.health, dinosaur5.energy, dinosaur6.energy, herd2.name);
 		}
 	}
 }
