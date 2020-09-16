@@ -7,11 +7,13 @@ namespace RobotsVsDinosaurs
 	class Fleet
 	{
 		// Member Variables
-		Robot[] robots;
+		public Robot[] robots;
+		public Random randomizer = new Random();
 
 		// Constructor
 		public Fleet(string newInstance)
 		{
+			robots = new Robot[3];
 			Console.WriteLine("A new fleet, '{0},' has been created!", newInstance);
 		}
 

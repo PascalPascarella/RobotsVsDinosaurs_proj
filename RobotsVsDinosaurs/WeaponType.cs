@@ -13,10 +13,15 @@ namespace RobotsVsDinosaurs
 		public double swordBusterHuge;
 
 		public double attackPower;
+		public Random randomizer = new Random();
 
 		// Constructor
 		public WeaponType(string newInstance)
 		{
+			gun = 1;
+			grenade = 4;
+			swordBusterHuge = 3;
+			swordEnergizedFast = 2;
 			Console.WriteLine("A new weapon combo, '{0},' has been created!", newInstance);
 		}
 

@@ -13,6 +13,7 @@ namespace RobotsVsDinosaurs
 		public int herdBonus;				// A multiplier that is only applied as long as n% Dinosaurs remain in local herd
 		public int fleetCount;      // Number of fleets participating in battle
 		public int herdCount;       // Number of herds participating in battle
+		public Random randomizer = new Random();
 
 		// Constructor
 		public Battlefield(int fleetCount, int herdCount, string nameTheNewInstance)
