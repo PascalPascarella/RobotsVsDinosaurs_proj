@@ -15,7 +15,7 @@ namespace RobotsVsDinosaurs
 			//			--> Extra TODO: Randomize Attack use
 			// Decide Victor after complete Fleet/Herd wiped out
 
-			Battlefield battlefield1 = new Battlefield(2, 3, "Marathon");
+			Battlefield battlefield1 = new Battlefield(2, 2, "Marathon");
 
 
 			Fleet fleet1 = new Fleet("The Shadow");
