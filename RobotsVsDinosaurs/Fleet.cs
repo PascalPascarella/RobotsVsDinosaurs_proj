@@ -13,7 +13,6 @@ namespace RobotsVsDinosaurs
 		// Constructor
 		public Fleet(string newInstance)
 		{
-			robots = new Robot[3];
 			Console.WriteLine("A new fleet, '{0},' has been created!", newInstance);
 		}
 

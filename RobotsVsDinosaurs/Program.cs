@@ -14,13 +14,16 @@ namespace RobotsVsDinosaurs
 			//		--> Extra TODO: Arm Dinosaurs
 			//			--> Extra TODO: Randomize Attack use
 			// Decide Victor after complete Fleet/Herd wiped out
+
+
+			// Class Instantiation
 			Random randomizer = new Random();
 
 			Battlefield battlefield1 = new Battlefield(2, 2, "Marathon");
 
 
-			Fleet fleet1 = new Fleet("The Shadow");
-			Fleet fleet2 = new Fleet("The Curators");
+			Fleet fleet1 = new Fleet ("The Shadow");
+			Fleet fleet2 = new Fleet ("The Curators");
 
 			Herd herd1 = new Herd("Obsidian");
 			Herd herd2 = new Herd("Collapse");
@@ -58,6 +61,16 @@ namespace RobotsVsDinosaurs
 			AttackType attackType4 = new AttackType("Devouring Magma Fists");
 			AttackType attackType5 = new AttackType("Winding Earth Method");
 			AttackType attackType6 = new AttackType("Hollow Rainbow Clap");
+
+
+			// Program Start
+
+			// Prepare User For Battle Statistics
+			Console.WriteLine("Battle commencing shortly...");
+
+			// Add Robots to Fleet
+			Robot[] roboArray1 = new Robot[] {robot1, robot2, robot3};
+			Console.WriteLine("Loading {0}, {1}, and {2} into a fleet! \n{0} has {3} units of integrity. \n{1} and {2} have {4} and {5} Wh of power respectively.", robot1.name, robot2.name, robot3.name, robot1.integrity, robot2.powerLevel, robot3.powerLevel);
 
 
 
