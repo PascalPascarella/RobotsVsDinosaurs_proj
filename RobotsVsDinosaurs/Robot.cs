@@ -13,9 +13,9 @@ namespace RobotsVsDinosaurs
 		public WeaponType weaponType;
 
 		// Constructor
-		public Robot()
+		public Robot(string newInstance)
 		{
-
+			Console.WriteLine("A new robot, 'Servitor {0},' has been created!", newInstance);
 		}
 
 		// Member Methods

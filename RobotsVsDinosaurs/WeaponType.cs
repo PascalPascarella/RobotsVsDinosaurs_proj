@@ -15,9 +15,9 @@ namespace RobotsVsDinosaurs
 		public double attackPower;
 
 		// Constructor
-		public WeaponType()
+		public WeaponType(string newInstance)
 		{
-
+			Console.WriteLine("A new weapon combo, '{0},' has been created!", newInstance);
 		}
 
 		// Member Methods

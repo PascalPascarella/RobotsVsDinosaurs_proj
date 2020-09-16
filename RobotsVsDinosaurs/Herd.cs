@@ -10,9 +10,9 @@ namespace RobotsVsDinosaurs
 		Dinosaur[] dinosaurs;
 
 		// Constructor
-		public Herd()
+		public Herd(string newInstance)
 		{
-
+			Console.WriteLine("A new herd, '{0},' has been created!", newInstance);
 		}
 
 		// Member Methods

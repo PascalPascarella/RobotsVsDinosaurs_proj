@@ -10,9 +10,9 @@ namespace RobotsVsDinosaurs
 		Robot[] robots;
 
 		// Constructor
-		public Fleet()
+		public Fleet(string newInstance)
 		{
-
+			Console.WriteLine("A new fleet, '{0},' has been created!", newInstance);
 		}
 
 		// Member Methods
