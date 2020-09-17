@@ -18,8 +18,9 @@ namespace RobotsVsDinosaurs
 		{
 			name = newInstance;
 			integrity = 10 + RandomIntegrity();
-			powerLevel = 100 + RandomPowerLevel();
+			powerLevel = 10 + RandomPowerLevel();
 			WeaponType weaponType1 = new WeaponType("Fire Slam");
+			attackCombo = weaponType1.attackCombo;
 			//WeaponType weaponType2 = new WeaponType("Justice Smash");
 			//WeaponType weaponType3 = new WeaponType("Dishonor Slash");
 
@@ -44,11 +45,14 @@ namespace RobotsVsDinosaurs
 		}
 
 		// Attack Damage
-		//public void Attack(Dinosaur dinosaur)
-		//{
-		//	if (integrity > 0)
-		//		dinosaur.health -= 
-		//}
+		public void Attack(Dinosaur dinosaur)
+		{
+			if (integrity > 0 && powerLevel > 0)
+			{
+				dinosaur.health -= attackCombo;
+				powerLevel -= attackCombo;
+			}
+		}
 
 	}
 }

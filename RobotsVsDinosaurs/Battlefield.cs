@@ -43,33 +43,53 @@ namespace RobotsVsDinosaurs
 			Console.WriteLine("\n\nThe {0} and {1} fleets unload their servitors. " +
 				"The {2} and {3} herds charge at the invaders.\n\n",
 				fleet1.name, fleet2.name, herd1.name, herd2.name);
-			//AttackPhase();
+			AttackPhase();
 		}
 
 		// Order Of Battle
-		//public void AttackPhase()
-		//{
-		//	while ((fleet1.CanFight() || fleet2.CanFight()) && (herd1.CanFight() || herd2.CanFight()))
-		//	{
-		//		Console.WriteLine("A clash!");
-		//		for (int r = 0; r < fleet1.robots.Length; r++)
-		//		{
-		//			fleet1.robots[r].Attack(herd1.dinosaurs[r]);
-		//		}
-		//		for (int d = 0; d < herd1.dinosaurs.Length; d++)
-		//		{
-		//			herd1.dinosaurs[d].Attack(herd1.dinosaurs[r]);
-		//		}
-		//		for (int r = 0; r < fleet2.robots.Length; r++)
-		//		{
-		//			fleet2.robots[r].Attack(herd2.dinosaurs[r]);
-		//		}
-		//		for (int d = 0; d < herd1.dinosaurs.Length; d++)
-		//		{
-		//			herd1.dinosaurs[d].Attack(herd1.dinosaurs[r]);
-		//		}
-		//	}
-
-		//}
+		public void AttackPhase()
+		{
+			while ((fleet1.CanFight() || fleet2.CanFight()) && (herd1.CanFight() || herd2.CanFight()))
+			{
+				Console.WriteLine("A clash!");
+				// Fleet 1 Attacks Herd 1
+				for (int r1 = 0; r1 < fleet1.robots.Length; r1++)
+				{
+					fleet1.robots[r1].Attack(herd1.dinosaurs[r1]);
+					Console.WriteLine("{0} iteration.", r1);
+				}
+				Console.WriteLine("Robo Fleet 1 finishes their attack.");
+				// Herd 1 Attacks Fleet 1
+				for (int d1 = 0; d1 < herd1.dinosaurs.Length; d1++)
+				{
+					herd1.dinosaurs[d1].Attack(fleet1.robots[d1]);
+				}
+				Console.WriteLine("Dino Herd 1 finishes their attack.");
+				//Fleet 2 Attacks Herd 2
+				for (int r2 = 0; r2 < fleet2.robots.Length; r2++)
+				{
+					fleet2.robots[r2].Attack(herd2.dinosaurs[r2]);
+				}
+				Console.WriteLine("Robo Fleet 2 finishes their attack.");
+				// Herd 2 Attacks Fleet 2
+				for (int d2 = 0; d2 < herd1.dinosaurs.Length; d2++)
+				{
+					herd1.dinosaurs[d2].Attack(fleet2.robots[d2]);
+				}
+				Console.WriteLine("Dino Herd 2 finishes their attack.");
+			}
+			if(fleet1.CanFight() || fleet2.CanFight())
+			{
+				Console.WriteLine("Synthetic Victory!");
+			}
+			else if (herd1.CanFight() || herd2.CanFight())
+			{
+				Console.WriteLine("Organic Victory!");
+			}
+			else
+			{
+				Console.WriteLine("An error has occurred, buddy.");
+			}
+		}
 	}
 }

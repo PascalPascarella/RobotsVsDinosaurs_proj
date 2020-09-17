@@ -10,7 +10,7 @@ namespace RobotsVsDinosaurs
 		public string name;									// Assigned to dinosaur at new class instance
 		public double health;								// Health bar that decreases upon taking hit
 		public double energy;               // Energy bar that decreases with each attack exertion
-		public double attackCombo;    // Creates random attack
+		public double attackCombo;					// Creates random attack
 		public Random randomizer = new Random();
 
 		// Constructor
@@ -18,8 +18,9 @@ namespace RobotsVsDinosaurs
 		{
 			name = newInstance;
 			health = 10 + RandomHealth();
-			energy = 100 +RandomEnergy();
+			energy = 10 +RandomEnergy();
 			AttackType attackType1 = new AttackType("Hidden Lily Kick");
+			attackCombo = attackType1.attackCombo;
 			//AttackType attackType2 = new AttackType("Sealed Giant Thrust");
 			//AttackType attackType3 = new AttackType("Brilliant Daydream Stab");
 
@@ -40,6 +41,17 @@ namespace RobotsVsDinosaurs
 		public int RandomEnergy()
 		{
 			return randomizer.Next(1, 50);      // Returns random integer value between 1 and 50 (inclusive)
+		}
+
+		// Attack Damage
+		public void Attack(Robot robot)
+		{
+			if (health > 0 && energy > 0)
+			{
+				robot.integrity -= attackCombo;
+				energy -= attackCombo;
+			}
+
 		}
 	}
 }
