@@ -11,8 +11,8 @@ namespace RobotsVsDinosaurs
 		public double charge;
 		public double claws;
 		public double tailSwipe;
-
-		public double attackPower;
+		public double attackCombo;
+		public double[] attackPower;      // Creates a new attack combo by combining 2 attacks from an array
 		public Random randomizer = new Random();
 
 		// Constructor
@@ -22,10 +22,17 @@ namespace RobotsVsDinosaurs
 			charge = 4;
 			claws = 3;
 			tailSwipe = 2;
-			Console.WriteLine("A new attack combo '{0}' has been created!", newInstance);
+			AttackPowerCombo(bite, charge, claws, tailSwipe);
+			attackCombo = randomizer.Next(attackPower.Length) + randomizer.Next(attackPower.Length);
+			Console.WriteLine("A new attack combo '{0}' has been created with an attack power of {1}!", newInstance, attackCombo);
+
 		}
 
 		// Member Methods
-
+		// Attack Power Calculator
+		public void AttackPowerCombo(double attack1, double attack2, double attack3, double attack4)
+		{
+			attackPower = new double[] { attack1, attack2, attack3, attack4 };
+		}
 	}
 }

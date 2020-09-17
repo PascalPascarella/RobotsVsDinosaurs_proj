@@ -9,8 +9,8 @@ namespace RobotsVsDinosaurs
 		// Member
 		public string name;									// Assigned to dinosaur at new class instance
 		public double health;								// Health bar that decreases upon taking hit
-		public double energy;								// Energy bar that decreases with each attack exertion
-		public AttackType[] attackType;     // Creates random attack
+		public double energy;               // Energy bar that decreases with each attack exertion
+		public double attackCombo;    // Creates random attack
 		public Random randomizer = new Random();
 
 		// Constructor
@@ -19,6 +19,13 @@ namespace RobotsVsDinosaurs
 			name = newInstance;
 			health = 10 + RandomHealth();
 			energy = 100 +RandomEnergy();
+			AttackType attackType1 = new AttackType("Hidden Lily Kick");
+			//AttackType attackType2 = new AttackType("Sealed Giant Thrust");
+			//AttackType attackType3 = new AttackType("Brilliant Daydream Stab");
+
+			//AttackType attackType4 = new AttackType("Devouring Magma Fists");
+			//AttackType attackType5 = new AttackType("Winding Earth Method");
+			//AttackType attackType6 = new AttackType("Hollow Rainbow Clap");
 			Console.WriteLine("A new dinosaur, '{0},' has been created with health of {1} and {2} energy!", newInstance, health, energy);
 		}
 

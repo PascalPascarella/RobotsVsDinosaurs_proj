@@ -37,11 +37,39 @@ namespace RobotsVsDinosaurs
 		// Member Methods
 		public void Main()
 		{
-
+			// Prepare User For Battle Statistics
+			Console.WriteLine("\n\nBattle commencing shortly...\n\n");
+			// Prepare User For Battle Statistics
+			Console.WriteLine("\n\nThe {0} and {1} fleets unload their servitors. " +
+				"The {2} and {3} herds charge at the invaders.\n\n",
+				fleet1.name, fleet2.name, herd1.name, herd2.name);
+			//AttackPhase();
 		}
-		public void AttackPhase(Fleet[] fleet, Herd[] herd)
-		{
 
-		}
+		// Order Of Battle
+		//public void AttackPhase()
+		//{
+		//	while ((fleet1.CanFight() || fleet2.CanFight()) && (herd1.CanFight() || herd2.CanFight()))
+		//	{
+		//		Console.WriteLine("A clash!");
+		//		for (int r = 0; r < fleet1.robots.Length; r++)
+		//		{
+		//			fleet1.robots[r].Attack(herd1.dinosaurs[r]);
+		//		}
+		//		for (int d = 0; d < herd1.dinosaurs.Length; d++)
+		//		{
+		//			herd1.dinosaurs[d].Attack(herd1.dinosaurs[r]);
+		//		}
+		//		for (int r = 0; r < fleet2.robots.Length; r++)
+		//		{
+		//			fleet2.robots[r].Attack(herd2.dinosaurs[r]);
+		//		}
+		//		for (int d = 0; d < herd1.dinosaurs.Length; d++)
+		//		{
+		//			herd1.dinosaurs[d].Attack(herd1.dinosaurs[r]);
+		//		}
+		//	}
+
+		//}
 	}
 }

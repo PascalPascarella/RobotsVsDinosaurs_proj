@@ -39,5 +39,15 @@ namespace RobotsVsDinosaurs
 			return dinosaurs;
 		}
 
+		// Combat-Effective Evaluator
+		public bool CanFight()
+		{
+			for (int d = 0; d < dinosaurs.Length; d++)
+			{
+				if (dinosaurs[d].health > 0)
+					return true;
+			}
+			return false;
+		}
 	}
 }
