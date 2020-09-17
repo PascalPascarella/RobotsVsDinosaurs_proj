@@ -7,8 +7,10 @@ namespace RobotsVsDinosaurs
 	class Battlefield
 	{
 		// Member Variables
-		public Fleet fleet;					// Array of n Robots objects
-		public Herd herd;						// Array of n Dinosaur objects
+		public Fleet fleet1;          // Array of n Robots objects
+		public Fleet fleet2;          // Array of n Robots objects -- can make into heavy variant of robot later
+		public Herd herd1;            // Array of n Dinosaur objects
+		public Herd herd2;            // Array of n Dinosaur objects -- can make into heavy variant of dinos later
 		public int fleetBonus;			// A multiplier that is only applied as long as n% Robots remain in local fleet
 		public int herdBonus;				// A multiplier that is only applied as long as n% Dinosaurs remain in local herd
 		public int fleetCount;      // Number of fleets participating in battle
@@ -18,15 +20,28 @@ namespace RobotsVsDinosaurs
 		// Constructor
 		public Battlefield(int fleetCount, int herdCount, string nameTheNewInstance)
 		{
+			Console.WriteLine("The battle will take place at {2}! {0} robot fleets will engage {1} saurian herds.", fleetCount, herdCount, nameTheNewInstance);
 			this.fleetCount = fleetCount;
 			this.herdCount = herdCount;
 			fleetBonus = 2;
 			herdBonus = 2;
+			fleet1 = new Fleet("The Shadow");
+			fleet2 = new Fleet("The Curators");
+			Console.WriteLine("\n");
+			herd1 = new Herd("Obsidian");
+			herd2 = new Herd("Collapse");
+			Console.WriteLine("\n");
 
-			Console.WriteLine("The battle will take place at {2}! {0} robot fleets will engage {1} saurian herds.", fleetCount, herdCount, nameTheNewInstance);
 		}
 
 		// Member Methods
+		public void Main()
+		{
 
+		}
+		public void AttackPhase(Fleet[] fleet, Herd[] herd)
+		{
+
+		}
 	}
 }
