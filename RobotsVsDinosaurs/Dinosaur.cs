@@ -21,6 +21,9 @@ namespace RobotsVsDinosaurs
 			energy = 10 +RandomEnergy();
 			AttackType attackType1 = new AttackType("Hidden Lily Kick");
 			attackCombo = attackType1.attackCombo;
+
+			// --> TODO: Build list to draw random attack names from
+
 			//AttackType attackType2 = new AttackType("Sealed Giant Thrust");
 			//AttackType attackType3 = new AttackType("Brilliant Daydream Stab");
 

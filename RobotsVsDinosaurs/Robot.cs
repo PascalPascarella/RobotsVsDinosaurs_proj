@@ -21,6 +21,9 @@ namespace RobotsVsDinosaurs
 			powerLevel = 10 + RandomPowerLevel();
 			WeaponType weaponType1 = new WeaponType("Fire Slam");
 			attackCombo = weaponType1.attackCombo;
+
+			// --> TODO: Build list to draw random attack names from
+
 			//WeaponType weaponType2 = new WeaponType("Justice Smash");
 			//WeaponType weaponType3 = new WeaponType("Dishonor Slash");
 

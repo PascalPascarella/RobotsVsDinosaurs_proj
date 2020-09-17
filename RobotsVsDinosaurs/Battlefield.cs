@@ -49,8 +49,10 @@ namespace RobotsVsDinosaurs
 		// Order Of Battle
 		public void AttackPhase()
 		{
-			while ((fleet1.CanFight() || fleet2.CanFight()) && (herd1.CanFight() || herd2.CanFight()))
+			int i = 0;
+			while ((fleet1.CanFight() || fleet2.CanFight()) && (herd1.CanFight() || herd2.CanFight()) && i < 30)
 			{
+				i++;
 				Console.WriteLine("A clash!");
 				// Fleet 1 Attacks Herd 1
 				for (int r1 = 0; r1 < fleet1.robots.Length; r1++)
@@ -81,6 +83,7 @@ namespace RobotsVsDinosaurs
 				}
 				Console.WriteLine("Dino Herd 2 finishes their attack.");
 			}
+			// Victory Conditions
 			if(fleet1.CanFight() || fleet2.CanFight())
 			{
 				Console.WriteLine("Synthetic Victory!");

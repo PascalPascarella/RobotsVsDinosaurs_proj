@@ -45,7 +45,10 @@ namespace RobotsVsDinosaurs
 			for (int d = 0; d < dinosaurs.Length; d++)
 			{
 				if (dinosaurs[d].health > 0)
+				{
 					return true;
+				}
+
 			}
 			return false;
 		}

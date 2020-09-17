@@ -23,7 +23,8 @@ namespace RobotsVsDinosaurs
 			claws = 3;
 			tailSwipe = 2;
 			AttackPowerCombo(bite, charge, claws, tailSwipe);
-			attackCombo = randomizer.Next(attackPower.Length) + randomizer.Next(attackPower.Length);
+			attackCombo = randomizer.Next(1, attackPower.Length) + randomizer.Next(1, attackPower.Length);
+
 			Console.WriteLine("A new attack combo '{0}' has been created with an attack power of {1}!", newInstance, attackCombo);
 
 		}

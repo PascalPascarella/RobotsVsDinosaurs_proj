@@ -50,7 +50,9 @@ namespace RobotsVsDinosaurs
 			for(int r = 0; r<robots.Length; r++)
 			{
 				if (robots[r].integrity > 0)
+				{
 					return true;
+				}
 			}
 			return false;
 		}
